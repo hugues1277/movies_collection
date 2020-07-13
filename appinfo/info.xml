@@ -6,11 +6,14 @@
     <summary>create movies database</summary>
     <description>This is an application which allow to create your own favorites movies collection.</description>
     <version>0.0.1</version>
+  	<category>multimedia</category>
+	<category>tools</category>
     <licence>agpl</licence>
     <author mail="fedwiiix@gmail.com" >fred</author>
     <namespace>MoviesCollection</namespace>
     <category>tools</category>
     <bugs>https://github.com/fedwiiix</bugs>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/fedwiiix/movies_collection/master/img/screenshot/2.jpg">https://raw.githubusercontent.com/fedwiiix/movies_collection/master/img/screenshot/2.jpg</screenshot>
     <dependencies>
         <nextcloud min-version="15" max-version="20"/>
     </dependencies>
