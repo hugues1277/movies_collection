@@ -1,0 +1,251 @@
+#main-title{
+	width: 100%;
+	padding: 20px 50px;
+	font-size: 25px;
+}
+
+#movie-preview {
+	position: fixed;
+	bottom: 0;
+	left: 300px;
+	height: 300px;
+	width: calc(100% - 300px);
+	background-color: var(--color-main-background);
+	border-top: 1px solid var(--color-border);
+	display: none;
+}
+
+#movie-preview img {
+	width:180px;
+	margin: 10px 20px;
+}
+
+#movie-preview .description {
+	height: 300px;
+	width: calc(100% - 225px);
+	vertical-align: top;
+	padding: 0px 20px 100px 0;
+	overflow-y: auto;
+}
+
+#movie-preview h2 {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	margin-top: 10px;
+	background-color: var(--color-main-background);
+}
+
+#movie-preview span {
+	font-weight: 500;
+	color: var(--color-main-text);
+}
+
+#movie-preview #icon-close {
+	position: absolute;
+	top:5px;
+	right:10px;
+	width: 15px;
+    height: 15px;
+	background: var(--icon-close-000);
+	z-index: 1;
+}
+
+.button-box {
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.button-box a {
+	padding: 6px 12px;
+    min-height: 34px;
+    cursor: pointer;
+	background-color: var(--color-background-dark);
+	border: 1px solid var(--color-border-dark);
+}
+
+.button-box a:first-child{
+	border-radius: var(--border-radius-pill) 0 0 var(--border-radius-pill);
+}
+
+.button-box a:last-child{
+	border-radius: 0 var(--border-radius-pill) var(--border-radius-pill) 0;
+}
+
+.button-box #changeListed {
+    padding-left: 25px;
+    background-position-x: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+	#movie-preview {
+		left: 0px;
+		width: 100%;
+	}
+
+	.description_img {
+		display: none!important;
+	}
+
+	#movie-preview .description {
+		width: 100%;
+		vertical-align: top;
+		padding: 0px 10px 100px 10px;
+		overflow-y: auto;
+	}
+
+	#movie-preview h2 {
+		margin-top: 0px;
+	}
+}
+
+/********** movie card ***********/
+
+#movie-collection {
+	width: 100%;
+	min-width: 300px;
+	padding-bottom: 400px;
+}
+.card {
+	position: relative;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.1s;
+	width: 140px;
+	margin: 10px;
+}
+.card *{
+	cursor: pointer;
+}
+.card:hover {
+  	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card img {
+	width: 100%;
+	height: 206px;
+}
+.card h2 {
+	padding: 2px 15px;
+	font-size: 16px;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.card .badge, .card .check {
+	position: absolute;
+	top: 5px;
+	padding: 2px 5px;
+    font-size: 85%;
+    font-weight: 500;
+    line-height: 1;
+	border-radius: 8px;
+	color: #fff;
+    background-color: #28a745;
+}
+.card .badge {
+	right: 5px;
+}
+.card .check {
+	left: 5px;
+	border-radius: 50%;
+	font-size: 75%;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+	#movie-collection {
+		text-align: center;
+	}
+}
+
+/********** movie progress ***********/
+
+.progress-container {
+	background: rgba(77, 77, 77, 0.1);
+	margin-top: 10px;
+}
+
+.progress {
+	height: 5px;
+	background: var(--color-primary);
+}
+
+.card .progress {
+	position: relative;
+    top: -6px;
+}
+
+/********** movie movie-form ***********/
+
+#movie-form {
+	width: 90%;
+	margin: 5%;
+	padding-bottom: 400px;
+	display: none;
+}
+#movie-form input:not([type="checkbox"]), #movie-form textarea {
+	width: 100%;
+}
+#posterUrlFormPreview{
+	width: 200px;
+	height: 294px;
+}
+#loading{ 
+	visibility: hidden;
+	position: relative;
+    top: 15px;
+}
+
+/********** pseudo bootstrap ***********/
+
+.col {
+	display: inline-block;
+}
+.col-6 {
+	display: inline-block;
+	width: calc(50% - 2px);
+}
+.col-12 {
+	width: 100%;
+}
+.align-center {
+	text-align:center;
+}
+
+.ml-50 {
+	margin-left: 50px;
+}
+.mr-50 {
+	margin-right: 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.col-6 {
+		width: 100%;
+	}
+}
+
+/********** toast ***********/
+
+#toast {
+	/*display: none;*/
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	top: -60px;
+	font-size: 17px;
+}
+#toast button {
+	background-color: #333;
+	color: #fff;
+	margin-left:15px;
+}

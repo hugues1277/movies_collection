@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>movies_collection</id>
+    <name>Movies Collection</name>
+    <summary>create movies database</summary>
+    <description>Create your own favorites movies collection in this nextcloud application.</description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="fedwiiix@gmail.com" >fred</author>
+    <namespace>MoviesCollection</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/fedwiiix</bugs>
+    <dependencies>
+        <nextcloud min-version="15" max-version="20"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Movies Collection</name>
+            <route>movies_collection.page.index</route>
+        </navigation>
+    </navigations>
+</info>

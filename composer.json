@@ -1,0 +1,15 @@
+{
+    "name": "Movies Collection",
+    "description": "create movies Collection",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "fred"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
