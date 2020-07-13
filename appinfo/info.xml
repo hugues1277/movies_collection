@@ -4,7 +4,7 @@
     <id>movies_collection</id>
     <name>Movies Collection</name>
     <summary>create movies database</summary>
-    <description>Create your own favorites movies collection in this nextcloud application.</description>
+    <description>This is an application which allow to create your own favorites movies collection.</description>
     <version>0.0.1</version>
     <licence>agpl</licence>
     <author mail="fedwiiix@gmail.com" >fred</author>
