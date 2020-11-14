@@ -19,7 +19,7 @@
     </dependencies>
     <navigations>
         <navigation>
-            <name>Movies Collection</name>
+            <name>Movies</name>
             <route>movies_collection.page.index</route>
         </navigation>
     </navigations>

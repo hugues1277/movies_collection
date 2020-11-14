@@ -415,7 +415,7 @@ class IMDB
                 if ('big' === strtolower($sSize) && false !== strstr($sMatch, '@._')) {
                     $sMatch = substr($sMatch, 0, strpos($sMatch, '@._')) . '@.jpg';
                 } else {
-                    $sMatch = preg_replace('/@([^@]+)$/', "@._V1_UY268_CR9,0,182,268_AL_.jpg", $sMatch);
+                    $sMatch = preg_replace('/_V1_([^@]+)$/', "_V1_UX182_CR0,0,182,268_AL_.jpg", $sMatch);
                 }
                 return IMDBHelper::cleanString($sMatch);
             }

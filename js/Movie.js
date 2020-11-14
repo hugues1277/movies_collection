@@ -59,7 +59,9 @@ class MovieClass {
     generateMovie(movie){
         return `<div id="${movie.id}" class="card" style="display:none;">
                     ${(movie.listed==1?'<span class="check icon-check">✓</span>':'')}
-                    <img id="img_${movie.id}" alt="${movie.title||''}">
+                    <div class="img-box">
+                      <img id="img_${movie.id}" alt="${movie.title||''}">
+                    </div>
                     ${movie.year!=0?`<span class="badge">${movie.year}</span>`:``}
                     <div class="progress" style="width: ${movie.rating||0}%;"></div>
                     <h2>${movie.title||''}</h2>
@@ -177,7 +179,9 @@ class MovieClass {
         let content = `
             <span id="icon-close"></span>
             <div class="col description_img">
-                <img src="${imgSrc}">
+                <div class="img-box">
+                  <img src="${imgSrc}">
+                </div>
             </div>
             <div class="col description">
                 <h2>${movie.title}</h2>

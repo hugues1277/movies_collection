@@ -31,7 +31,9 @@
             <input type="text" id="runtime">
         </div>
         <div class="col" style="margin: 10px 50px;">
+          <div id="posterUrlFormPreview-box">
             <img id="posterUrlFormPreview" src="">
+          </div>
         </div>
         <div class="col-12">
             <label>Cast</label>
