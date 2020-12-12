@@ -155,6 +155,7 @@ class MovieClass {
         }).done(function (response) {
             callback(response)
         }).fail(function (response, code) {
+            toast("An error occurred.", 3);
         });
     }
     destroy(id){
@@ -168,6 +169,7 @@ class MovieClass {
             toast("Movie deleted.", 3);
             self.hideMoviePreview();
         }).fail(function (response, code) {
+            toast("An error occurred.", 3);
         });
     }
 
