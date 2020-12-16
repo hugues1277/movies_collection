@@ -1,5 +1,5 @@
 <?php
-script('people', ['Form','Movie','Imdb','script']);
+script('movies_collection', ['Form','Movie','Imdb','script']);
 style('movies_collection', 'style');
 ?>
 
