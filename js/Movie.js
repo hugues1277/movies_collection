@@ -198,7 +198,6 @@ class MovieClass {
                     <a href="https://www.youtube.com/results?search_query=${movie.title} trailer" target="blank">Y.</a>
                     <a href="#" id="update">Update</a>
                     <a href="#" class="${movie.listed==1?'icon-close':'icon-add'}" id="changeListed">My list</a>
-                    <a id="add-new">Add new</a>
                     <a href="#" id="remove">Remove</a>
                 </div>
                 ${movie.comment?`<p><span>My Comment:</span> ${movie.comment}</p>`:``}

@@ -57,4 +57,4 @@
     </form>
 </section>
 
-<div id="toast">sqdqsd</div>
+<div id="toast"></div>
