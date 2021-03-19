@@ -53,21 +53,10 @@ class ImdbController extends Controller
      */
     public static function getImage(string $url)
     {
-        return new DataResponse(ImdbController::imageToBase64($url));
+        return new DataResponse(self::imageToBase64($url));
     }
-
-    private function curl_get_contents($url)
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        $data = curl_exec($ch);
-        curl_close($ch);
-        return $data;
-    }
-    private function imageToBase64($image){
-        $imageData = base64_encode(ImdbController::curl_get_contents($image));
+    private static function imageToBase64($image){
+        $imageData = base64_encode(self::curl_get_contents($image));
         $mime_types = array(
         'gif' => 'image/gif',
         'jpg' => 'image/jpg',
@@ -80,5 +69,15 @@ class ImdbController extends Controller
             $a = $mime_types[$ext];
         }
         return 'data: '.$a.';base64,'.$imageData;
+    }
+    private static function curl_get_contents($url)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        return $data;
     }
 }
