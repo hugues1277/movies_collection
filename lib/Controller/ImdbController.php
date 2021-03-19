@@ -53,10 +53,10 @@ class ImdbController extends Controller
      */
     public static function getImage(string $url)
     {
-        return new DataResponse($this->imageToBase64($url));
+        return new DataResponse(ImdbController::imageToBase64($url));
     }
 
-    function curl_get_contents($url)
+    private function curl_get_contents($url)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -66,8 +66,8 @@ class ImdbController extends Controller
         curl_close($ch);
         return $data;
     }
-    function imageToBase64($image){
-        $imageData = base64_encode($this->curl_get_contents($image));
+    private function imageToBase64($image){
+        $imageData = base64_encode(ImdbController::curl_get_contents($image));
         $mime_types = array(
         'gif' => 'image/gif',
         'jpg' => 'image/jpg',
